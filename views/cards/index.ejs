@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+   </head>
+   <body>
+      <%- include('../partials/nav.ejs')%>
+      <h1>Home Page</h1>
+      <% for(i=0;i<cards.length;i++){ %>
+         <a href="/card/<%=cards[i].id%>">
+         <h1><%=cards[i].name%></h1>
+         </a>
+         <br>
+      <% } %>
+   </body>
+</html>

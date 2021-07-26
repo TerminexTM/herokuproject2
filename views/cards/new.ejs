@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+   </head>
+   <body>
+      <form action="/card" method="post">
+         Card Name: <input type="text" name="name" value="">
+         Image Link: <input type="text" name="img" value="">
+         Card Type: <input type="text" name="type" value="">
+         Abilities: <input type="text" name="abilities" value="">
+         Power: <input type="text" name="power" value="">
+         Toughness: <input type="text" name="toughness" value="">
+         <fieldset>
+            <legend>Card Mana Color</legend>
+            Blue: <input type="text" name="color.Blue" value="Blue">
+            Green: <input type="text" name="color.Green" value="Green">
+            Red: <input type="text" name="color.Red" value="Red">
+            Black: <input type="text" name="color.Black" value="Black">
+            White: <input type="text" name="color.White" value="White">
+            Colorless: <input type="text" name="color.Colorless" value="Colorless">
+         </fieldset>
+         <input type="submit" name="" value="Create Card">
+      </form>
+      <a href="/card">Return</a>
+   </body>
+</html>

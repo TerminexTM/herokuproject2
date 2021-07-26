@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+   </head>
+   <body>
+      <form action="/card/<%=card.id%>?_method=PUT" method="post">
+         Card Name: <input type="text" name="name" value="<%=card.name%>">
+         Image Link: <input type="text" name="img" value="<%=card.img%>">
+         Card Type: <input type="text" name="type" value="<%=card.type%>">
+         Abilities: <input type="text" name="abilities" value="<%=card.abilities%>">
+         Power: <input type="text" name="power" value="<%=card.power%>">
+         Toughness: <input type="text" name="toughness" value="<%=card.toughness%>">
+         <fieldset>
+            <legend>Card Mana Cost</legend>
+            Blue: <input type="text" name="color.Blue" value="Blue">
+            Green: <input type="text" name="color.Green" value="Green">
+            Red: <input type="text" name="color.Red" value="Red">
+            Black: <input type="text" name="color.Black" value="Black">
+            White: <input type="text" name="color.White" value="White">
+            Colorless: <input type="text" name="color.Coloress" value="Colorless">
+         </fieldset>
+         <input type="submit" value="Complete Edits">
+      </form>
+      <a href="/card/<%=card.id%>">Return</a>
+   </body>
+</html>

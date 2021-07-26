@@ -1,0 +1,153 @@
+ *{
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.frame-header {
+   display: flex;
+   border: 2px solid brown;
+   border-top: 5px solid black, 3px solid brown;
+   border-bottom: 4px solid brown;
+   border-radius: 15px/40px;
+   box-shadow: 0px 0px 5px black;
+   margin-bottom: 1%;
+   box-shadow: inset 0 0 0 1px black, inset 2px 0 3px 1px black;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   margin-bottom: 0;
+}
+.frame-type-line {
+   border: 2px solid brown;
+   border-top: 3px solid brown;
+   border-bottom: 4px solid brown;
+   border-radius: 15px/40px;
+}
+.stats {
+   align-self: flex-end;
+   position: absolute;
+   bottom: 10%;
+   right: 6%;
+   border: 4px solid rgb(199, 194, 182);
+   border-radius: 15px/40px;
+   padding: 1px;
+   padding-top: 4px;
+   padding-left: 12px;
+   padding-right: 12px;
+   font-size: 1.4rem;
+   box-shadow: inset -3px 3px 3px black, -5px 3px 3px gray;
+}
+.frame-header > .title {
+   width: 85%;
+}
+.frame-header > h1 {
+   margin-left: 1%;
+}
+.card-container {
+   border: 1px solid black;
+   width: 500px;
+   height: 700px;
+   margin: 0 auto;
+   margin-top: 56px;
+   border-radius: 25px;
+   box-sizing: border-box;
+   box-shadow: -8px 9px 16px -3px gray;
+   background: black;
+}
+.card-background {
+   height: 600px;
+   margin: 20px 20px 0 20px;
+   border-top-left-radius: 6px;
+   border-top-right-radius: 6px;
+   border-bottom-left-radius: 8%;
+   border-bottom-right-radius: 8%;
+   background-color: #bbb;
+   z-index: 0;
+}
+.card-frame {
+   z-index: 1;
+   position: relative;
+   height: 108%;
+   max-width: 97%;
+   left: 1%;
+   top: 0.5%;
+   display: flex;
+   flex-direction: column;
+   padding: 2px;
+}
+/*
+.container {
+   display: flex;
+   width: 80%;
+   flex-wrap: wrap;
+}
+.top {
+   display: flex;
+   width: 100%;
+   justify-content: flex-end;
+}
+img {
+   width: 90%;
+}
+.imageContainer {
+   display: flex;
+   width: 100%;
+   justify-content: center;
+} */
+.colorless {
+   color: gray;
+}
+.blue {
+   color: blue;
+}
+.green {
+   color: green;
+}
+.red {
+   color: red;
+}
+.white {
+   color: white;
+}
+.black {
+   color: Black;
+}
+img {
+   width: 96%;
+   height: 20rem;
+   margin-left: 1.2%;
+   border: 3px solid brown;
+   border-top: none;
+}
+/* .mana {
+
+}
+.title {
+   width: 85%;
+   align-self: flex-start;
+   margin-right: 8%;
+} */
