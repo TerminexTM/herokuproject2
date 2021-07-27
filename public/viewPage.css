@@ -86,6 +86,7 @@ table {
    margin-left: 1%;
    margin-top: 1%;
 }
+/* This is the container and numbers for toughness and defense */
 .stats {
    align-self: flex-end;
    position: absolute;
@@ -102,6 +103,7 @@ table {
    background-color: #bbb;
    margin-bottom: 5px;
 }
+/*This is where the title and mana cost go*/
 .frame-header > .title {
    width: 85%;
 }
@@ -113,8 +115,9 @@ table {
    margin-top: 56px;
    border-radius: 25px;
    box-sizing: border-box;
-   box-shadow: -8px 9px 16px -3px rgb(182, 21, 21);
+   box-shadow: -8px 9px 16px -3px rgba(13, 14, 15, 1);
    background: black;
+   margin-bottom: 2%;
 }
 .card-background {
    height: 300px;
@@ -161,4 +164,10 @@ img {
    margin-left: 1.4%;
    border: 3px solid brown;
    border-top: none;
+}
+.card-container:hover {
+   transition-duration: .1s;
+   transform: translate(-7px, 4px);
+   box-shadow: -5px 4px 5px -3px rgba(13, 14, 15, 1);
+;
 }
