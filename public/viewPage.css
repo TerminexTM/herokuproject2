@@ -19,6 +19,7 @@ body {
   line-height: 1;
   display: flex;
   flex-wrap: wrap;
+  background-image: url('../images/thumbnail.jpg');
 }
 ol, ul {
   list-style: none;
@@ -112,7 +113,7 @@ table {
    margin-top: 56px;
    border-radius: 25px;
    box-sizing: border-box;
-   box-shadow: -8px 9px 16px -3px darkgray;
+   box-shadow: -8px 9px 16px -3px rgb(182, 21, 21);
    background: black;
 }
 .card-background {
