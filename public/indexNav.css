@@ -1,0 +1,85 @@
+.navbar {
+   padding-top: 1%;
+   padding-bottom: 1%;
+   display: inline-flex;
+   width: 90%;
+   background: rgb(0,0,0,.6);
+   margin-top: 2%;
+   margin-bottom: 0;
+   border-top-right-radius: 50%;
+   border-bottom-right-radius: 50%;
+}
+.navbar > .navimg > img {
+   width: 80%;
+   height: 6rem;
+   border: 3px solid rgb(190, 132, 20);
+   border-radius: 100%;
+   margin-left: 1%;
+   box-shadow: 0px 2px 4px 4px black;
+}
+.navbar > .navimg {
+   width: 26%;
+   margin-left: 3%;
+}
+.new {
+   position: relative;
+   margin-left: 6%;
+   border: 2px solid white;
+   padding: 2%;
+   padding-left: 4%;
+   padding-right: 4%;
+   border-radius: 100%;
+   align-self: center;
+   height: 3rem;
+   display: flex;
+   align-content: center;
+   justify-content: center;
+   background-color: rgb(22, 60, 116,.5);
+   text-decoration: none;
+   color: rgb(255,255,255,.7);
+   box-shadow: 0px 2px 2px 2px black;
+}
+.new > h1 {
+   margin-top: 8%;
+   font-size: 1.5rem;
+}
+.new:hover {
+   background-color: rgb(22, 60, 116, 1);
+   color:white;
+}
+.new:active {
+   transition-duration: .2s;
+   box-shadow: none;
+   transform: translate(-2px, 1px);
+}
+.login {
+   position: relative;
+   margin-left: 6%;
+   border: 2px solid white;
+   padding: 2%;
+   padding-left: 6%;
+   padding-right: 6%;
+   border-radius: 100%;
+   align-self: center;
+   height: 3rem;
+   display: flex;
+   align-content: center;
+   justify-content: center;
+   background-color: rgb(31, 166, 14,.5);
+   text-decoration: none;
+   color: rgb(255,255,255,.7);
+   box-shadow: 0px 2px 2px 2px black;
+}
+.login > h1 {
+   margin-top: 20%;
+   font-size: 1.5rem;
+}
+.login:hover {
+   background-color: rgb(31, 166, 14, 1);
+   color:white;
+}
+.login:active {
+   transition-duration: .2s;
+   box-shadow: none;
+   transform: translate(-2px, 1px);
+}

@@ -4,9 +4,16 @@
       <meta charset="utf-8">
       <link rel="stylesheet" href="../../showpage.css">
       <title>Show Page</title>
+      <%- include('../partials/background.ejs') %>
    </head>
    <body>
-      <h1>SHOW PAGE</h1>
+      <nav class='navbar'>
+         <a class='navimg' href="/card"><img src="../images/iconPhoto.jpg" alt=""></a>
+         <a class='edit' href="/card/<%=card.id%>/edit"><h1>Edit Card</h1></a>
+         <form class='deleteForm' action="/card/<%=card.id%>?_method=DELETE"   method="post">
+            <input class='delete' type="submit" value="DELETE">
+         </form>
+      </nav>
       <div class="card-container">
          <div class="card-background">
             <div class="card-frame">
@@ -23,17 +30,17 @@
                   <% } if(card.color.White > 0) {%>
                   <h1 class='white mana'><%=card.color.White%></h1>
                   <% } if(card.color.Black > 0) {%>
-                  <h1 class='black mana'><%card.color.Black%></h1>
+                  <h1 class='black mana'><%=card.color.Black%></h1>
                   <% } %>
                </div>
                   <div class="imageContainer">
                      <img src="<%=card.img%>" alt="Card Image">
                  </div>
                  <div class="frame-type-line">
-                    <%=card.type%>
+                   <h1><%=card.type%></h1>
                  </div>
                  <div class="frame-text-box">
-                    <%=card.abilities%>
+                   <p><%=card.abilities%></p>
                  </div>
                  <div class="stats">
                     <%=card.power%>/<%=card.toughness%>
@@ -41,9 +48,5 @@
             </div>
          </div>
       </div>
-      <a href="/card/<%=card.id%>/edit">Edit Card</a>
-      <form action="/card/<%=card.id%>?_method=DELETE"   method="post">
-         <input type="submit" value="DELETE">
-      </form>
    </body>
 </html>
