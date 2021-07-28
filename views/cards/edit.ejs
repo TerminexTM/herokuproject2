@@ -5,6 +5,7 @@
       <title></title>
    </head>
    <body>
+      <%- include('../partials/nav.ejs')%>
       <form action="/card/<%=card.id%>?_method=PUT" method="post">
          Card Name: <input type="text" name="name" value="<%=card.name%>">
          Image Link: <input type="text" name="img" value="<%=card.img%>">

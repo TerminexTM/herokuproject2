@@ -1,28 +1,59 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
    <head>
+      <link rel="stylesheet" href="../../showPage.css">
+      <link rel="stylesheet" href="../../newPage.css">
       <meta charset="utf-8">
-      <title></title>
+      <title>Create</title>
    </head>
    <body>
+      <%- include('../partials/nav.ejs')%>
       <form action="/card" method="post">
+         <fieldset>
+            <legend>Core info</legend>
          Card Name: <input type="text" name="name" value="">
          Image Link: <input type="text" name="img" value="">
          Card Type: <input type="text" name="type" value="">
-         Abilities: <input type="text" name="abilities" value="">
-         Power: <input type="text" name="power" value="">
-         Toughness: <input type="text" name="toughness" value="">
-         <fieldset>
-            <legend>Card Mana Color</legend>
-            Blue: <input type="text" name="color.Blue" value="Blue">
-            Green: <input type="text" name="color.Green" value="Green">
-            Red: <input type="text" name="color.Red" value="Red">
-            Black: <input type="text" name="color.Black" value="Black">
-            White: <input type="text" name="color.White" value="White">
-            Colorless: <input type="text" name="color.Colorless" value="Colorless">
          </fieldset>
-         <input type="submit" name="" value="Create Card">
+         Abilities: <textarea name="abilities" rows="8" cols="80"></textarea>
+         <fieldset>
+            <legend>Card Stats</legend>
+            Power: <input type="text" name="power" value="">
+            Toughness: <input type="text" name="toughness" value="">
+         </fieldset>
+         <fieldset class='manaBox'>
+               <legend>Card Mana Cost</legend>
+               Blue: <input type="text" name="color.Blue" value="">
+               Green: <input type="text" name="color.Green" value="">
+               Red: <input type="text" name="color.Red" value="">
+               Black: <input type="text" name="color.Black" value="">
+               White: <input type="text" name="color.White" value="">
+               Colorless: <input type="text" name="color.Colorless" value="">
+         </fieldset>
+         <input class='button' type="submit" name="" value="Create Card">
       </form>
-      <a href="/card">Return</a>
+      <div class="card-container">
+         <div class="card-background">
+            <div class="card-frame">
+               <div class="frame-header">
+                  <h1 class='title'>Card Name</h1>
+                  <h1 class='black mana'>Mana Cost</h1>
+               </div>
+                  <div class="imageContainer">
+                     <img src="" alt="Card Image Goes Here">
+                 </div>
+                 <div class="frame-type-line">
+                   <h1>Card Type (creature, artifact, dog, cat!)</h1>
+                 </div>
+                 <div class="frame-text-box">
+                   <p>Description of abilities, be detailed!</p>
+                 </div>
+                 <div class="stats">
+                    Creature Power/Creature Toughness
+                 </div>
+            </div>
+         </div>
+      </div>
+      <a class='return' href="/card">Return</a>
    </body>
 </html>
