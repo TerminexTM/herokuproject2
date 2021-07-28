@@ -39,6 +39,8 @@ textarea {
    padding-top: .2%;
    padding-bottom: .2%;
    font-weight: normal;
+   width: 180px;
+   font-size: 16px;
 }
 .manaBox {
    width: 10%;
@@ -52,19 +54,21 @@ textarea {
    position: absolute;
    transform: translate(950px, -950px);
    text-decoration: none;
-   padding: 4.8rem;
-   padding-right: 3.55%;
-   padding-top: .3%;
-   padding-bottom: .3%;
+   padding: 27px;
+   padding-right: 24px;
+   padding-top: 5px;
+   padding-bottom: 5px;
    border: 1px solid black;
    border-radius: 3px;
    background-color: rgb(254, 230, 206);
    color: black;
+   font-size: 16px;
+   width: 127px;
+   text-align: center;
 }
 .return:hover{
    font-weight: bolder;
 }
 .button:hover{
    font-weight: bolder;
-   width: 10.3%;
 }

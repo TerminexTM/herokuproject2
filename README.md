@@ -12,3 +12,6 @@ potentially give users unique access when they login to only edit or delete thei
 
 //CODE FOR SERVER PLACE IN .ENV WHEN CONNECTED TO INTERNET!
 mongodb+srv://dooster:DustBust1995@@cluster0.f1ycc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+//CODE FOR OFFLINE Database
+mongodb://localhost:27017/card_game
