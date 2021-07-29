@@ -7,6 +7,7 @@
       <title>Create</title>
    </head>
    <body>
+      <%- include('../partials/background.ejs') %>
       <%- include('../partials/nav.ejs')%>
       <form action="/card" method="post">
          <fieldset>
@@ -15,7 +16,7 @@
          Image Link: <input type="text" name="img" value="">
          Card Type: <input type="text" name="type" value="">
          </fieldset>
-         Abilities: <textarea name="abilities" rows="8" cols="80"></textarea>
+         Abilities: <textarea resize='none' name="abilities" rows="8" cols="80"></textarea>
          <fieldset>
             <legend>Card Stats</legend>
             Power: <input type="text" name="power" value="">
@@ -23,14 +24,14 @@
          </fieldset>
          <fieldset class='manaBox'>
                <legend>Card Mana Cost</legend>
-               Blue: <input type="text" name="color.Blue" value="">
-               Green: <input type="text" name="color.Green" value="">
-               Red: <input type="text" name="color.Red" value="">
-               Black: <input type="text" name="color.Black" value="">
-               White: <input type="text" name="color.White" value="">
-               Colorless: <input type="text" name="color.Colorless" value="">
+               <span id='blue'>Blue: </span><input type="text" name="color.Blue" value="">
+               <span id='green'>Green: </span><input type="text" name="color.Green" value="">
+               <span id='red'>Red: </span><input type="text" name="color.Red" value="">
+               <span id='black'>Black: </span><input type="text" name="color.Black" value="">
+               <span id='white'>White: </span><input type="text" name="color.White" value="">
+               <span id='gray'>Colorless: </span><input type="text" name="color.Colorless" value="">
          </fieldset>
-         <input class='button' type="submit" name="" value="Create Card">
+         <input class='button' type="submit" name="" value="Finish & Create">
       </form>
       <div class="card-container">
          <div class="card-background">

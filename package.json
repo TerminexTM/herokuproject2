@@ -1,8 +1,8 @@
 {
   "name": "herokuproject2",
   "engines": {
-     "node": "16.4.1"
- },
+    "node": "16.4.1"
+  },
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -22,9 +22,11 @@
   },
   "homepage": "https://github.com/TerminexTM/herokuproject2#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "express-session": "^1.17.2",
     "method-override": "^3.0.0",
     "mongoose": "^5.13.3"
   }

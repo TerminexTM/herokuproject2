@@ -1,29 +1,73 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
    <head>
+      <link rel="stylesheet" type='text/css' href="../../showpage.css">
+      <link rel="stylesheet" type='text/css' href="../../editPage.css">
       <meta charset="utf-8">
       <title></title>
    </head>
    <body>
+      <%- include('../partials/background.ejs') %>
       <%- include('../partials/nav.ejs')%>
       <form action="/card/<%=card.id%>?_method=PUT" method="post">
-         Card Name: <input type="text" name="name" value="<%=card.name%>">
-         Image Link: <input type="text" name="img" value="<%=card.img%>">
-         Card Type: <input type="text" name="type" value="<%=card.type%>">
-         Abilities: <input type="text" name="abilities" value="<%=card.abilities%>">
-         Power: <input type="text" name="power" value="<%=card.power%>">
-         Toughness: <input type="text" name="toughness" value="<%=card.toughness%>">
          <fieldset>
-            <legend>Card Mana Cost</legend>
-            Blue: <input type="text" name="color.Blue" value="<%=card.color.Blue%>">
-            Green: <input type="text" name="color.Green" value="<%=card.color.Green%>">
-            Red: <input type="text" name="color.Red" value="<%=card.color.Red%>">
-            Black: <input type="text" name="color.Black" value="<%=card.color.Black%>">
-            White: <input type="text" name="color.White" value="<%=card.color.White%>">
-            Colorless: <input type="text" name="color.Colorless" value="<%=card.color.Colorless%>">
+            <legend>Core info</legend>
+               Card Name: <input type="text" name="name" value="<%=card.name%>">
+               Image Link: <input type="text" name="img" value="<%=card.img%>">
+               Card Type: <input type="text" name="type" value="<%=card.type%>">
          </fieldset>
-         <input type="submit" value="Complete Edits">
+         Abilities: <textarea resize='none' name="abilities" rows="8" cols="80"><%=card.abilities%></textarea>
+         <fieldset>
+            <legend>Card Stats</legend>
+               Power: <input type="text" name="power" value="<%=card.power%>">
+               Toughness: <input type="text" name="toughness" value="<%=card.toughness%>">
+         </fieldset>
+         <fieldset class='manaBox'>
+            <legend>Card Mana Cost</legend>
+            <span id='blue'>Blue: </span><input type="text" name="color.Blue" value="<%=card.color.Blue%>">
+            <span id='green'>Green: </span><input type="text" name="color.Green" value="<%=card.color.Green%>">
+            <span id='red'>Red: </span><input type="text" name="color.Red" value="<%=card.color.Red%>">
+            <span id='black'>Black: </span><input type="text" name="color.Black" value="<%=card.color.Black%>">
+            <span id='white'>White: </span><input type="text" name="color.White" value="<%=card.color.White%>">
+            <span id='gray'>Colorless: </span><input type="text" name="color.Colorless" value="<%=card.color.Colorless%>">
+         </fieldset>
+         <input class='button' type="submit" value="Complete Edits">
       </form>
-      <a href="/card/<%=card.id%>">Return</a>
+
+      <div class="card-container">
+         <div class="card-background">
+            <div class="card-frame">
+               <div class="frame-header">
+                  <h1 class='title'><%=card.name%></h1>
+                  <%if(card.color.Colorless > 0){%>
+                  <h1 class='colorless mana'><%=card.color.Colorless%></h1>
+                  <% } if(card.color.Blue > 0) { %>
+                  <h1 class='blue mana'><%=card.color.Blue%></h1>
+                  <% } if(card.color.Green > 0) {%>
+                  <h1 class='green mana'><%=card.color.Green%></h1>
+                  <% } if(card.color.Red > 0) {%>
+                  <h1 class='red mana'><%=card.color.Red%></h1>
+                  <% } if(card.color.White > 0) {%>
+                  <h1 class='white mana'><%=card.color.White%></h1>
+                  <% } if(card.color.Black > 0) {%>
+                  <h1 class='black mana'><%=card.color.Black%></h1>
+                  <% } %>
+               </div>
+                  <div class="imageContainer">
+                     <img src="<%=card.img%>" alt="Card Image">
+                 </div>
+                 <div class="frame-type-line">
+                   <h1><%=card.type%></h1>
+                 </div>
+                 <div class="frame-text-box">
+                   <p><%=card.abilities%></p>
+                 </div>
+                 <div class="stats">
+                    <%=card.power%>/<%=card.toughness%>
+                 </div>
+            </div>
+         </div>
+      </div>
+      <a class='return' href="/card/<%=card.id%>">Return</a>
    </body>
 </html>

@@ -36,13 +36,6 @@ h1 {
 .title {
    margin-top: 2%;
 }
-.imageContainer {
-   height: 19rem;
-   text-align: center;
-   transform: translateY(50%);
-   font-size: 1rem;
-
-}
 form {
    display: flex;
    flex-wrap: wrap;

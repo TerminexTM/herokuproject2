@@ -5,6 +5,7 @@ const express = require('express');
 const methodOverride  = require('method-override');
 const mongoose = require('mongoose');
 const cardController = require('./controllers/card_controller.js')
+const userController = require('./controllers/users_controller.js')
 const app = express ();
 const db = mongoose.connection;
 require('dotenv').config()
@@ -37,10 +38,11 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 //use method override
 app.use(methodOverride('_method'));
 app.use('/card', cardController);
+app.use('/users', userController)
 
 
 app.get('/' , (req, res) => {
-  res.send('Hello World!');
+  res.redirect('/card');
 });
 //___________________
 //Listener
