@@ -15,6 +15,7 @@ const cardSchema = new mongoose.Schema({
    abilities: { type: String, required: false},
    power: { type: Number, required: true},
    toughness: { type: Number, required: true},
+   username: String,
 })
 
 const Card = mongoose.model('Card', cardSchema);

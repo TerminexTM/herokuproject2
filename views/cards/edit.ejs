@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
    <head>
+      <script src="https://kit.fontawesome.com/b194fba2a7.js" crossorigin="anonymous"></script>
       <link rel="stylesheet" type='text/css' href="../../showpage.css">
       <link rel="stylesheet" type='text/css' href="../../editPage.css">
       <meta charset="utf-8">
@@ -31,7 +32,9 @@
             <span id='white'>White: </span><input type="text" name="color.White" value="<%=card.color.White%>">
             <span id='gray'>Colorless: </span><input type="text" name="color.Colorless" value="<%=card.color.Colorless%>">
          </fieldset>
+         <input type="hidden" name="username" value="<%=currentUser.username%>">
          <input class='button' type="submit" value="Complete Edits">
+
       </form>
 
       <div class="card-container">
@@ -67,6 +70,7 @@
                  </div>
             </div>
          </div>
+         <h6><i class="fas fa-paint-brush"></i> <%=card.username%></h6>
       </div>
       <a class='return' href="/card/<%=card.id%>">Return</a>
    </body>
