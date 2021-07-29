@@ -6,6 +6,7 @@ const methodOverride  = require('method-override');
 const mongoose = require('mongoose');
 const cardController = require('./controllers/card_controller.js')
 const userController = require('./controllers/users_controller.js')
+const sessionsController = require('./controllers/sessions_controller.js')
 const app = express ();
 const db = mongoose.connection;
 require('dotenv').config()
