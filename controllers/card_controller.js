@@ -1,10 +1,16 @@
 const express = require('express')
 const Card = require('../models/card.js')
 const card = express.Router();
-
+const isAuthenticated = (req,res, next) => {
+   if(req.session.currentUser){
+      return next()
+   } else {
+      res.redirect('/sessions/new')
+   }
+}
 
 //delete
-card.delete('/:id', (req,res)=> {
+card.delete('/:id', isAuthenticated, (req,res)=> {
    Card.findByIdAndRemove(req.params.id, (err, deleteCard)=> {
       res.redirect('/card')
    })
@@ -15,15 +21,18 @@ card.delete('/:id', (req,res)=> {
 card.get('/', (req,res)=> {
    Card.find({}, (err, allCards)=> {
       res.render('cards/index.ejs', {
-         cards: allCards
+         cards: allCards,
+         currentUser: req.session.currentUser
       })
    })
 })
 
 //=============================
 //Create New Card
-card.get('/new', (req,res)=> {
-   res.render('cards/new.ejs')
+card.get('/new', isAuthenticated, (req,res)=> {
+   res.render('cards/new.ejs', {
+      currentUser: req.session.currentUser
+   })
 })
 
 card.post('/', (req,res)=> {
@@ -38,15 +47,17 @@ card.get('/:id', (req,res)=> {
    Card.findById(req.params.id, (err, detailCard)=> {
       console.log(detailCard);
       res.render('cards/show.ejs', {
-         card: detailCard
+         card: detailCard,
+         currentUser: req.session.currentUser
          })
       })
    })
 //edit existing card
-card.get('/:id/edit', (req,res)=> {
+card.get('/:id/edit', isAuthenticated, (req,res)=> {
    Card.findById(req.params.id, (err, getCard)=>{
       res.render('cards/edit.ejs', {
-         card: getCard
+         card: getCard,
+         currentUser: req.session.currentUser
       })
    })
 })

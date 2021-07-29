@@ -5,7 +5,11 @@ const User = require('../models/user.js')
 
 
 users.get('/new', (req,res)=>{
-   res.render('users/newuser.ejs')
+      res.render('users/newuser.ejs',
+      {
+         currentUser: req.session.currentUser
+      }
+   )
 })
 users.post('/', (req,res)=> {
    req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))

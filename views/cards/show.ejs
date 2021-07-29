@@ -15,6 +15,9 @@
             <input class='delete' type="submit" value="DELETE">
          </form>
       </nav>
+      <% if (currentUser) { %>
+         <h4>Welcome: <%=currentUser.username%></h4>
+      <% } %>
       <div class="card-container">
          <div class="card-background">
             <div class="card-frame">

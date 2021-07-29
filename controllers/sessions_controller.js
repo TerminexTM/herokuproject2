@@ -1,12 +1,12 @@
 const bcrypt = require('bcrypt')
 const express = require('express')
 const sessions = express.Router()
-const User = require('../models/users.js')
+const User = require('../models/user.js')
 
 
 
 sessions.get('/new', (req,res)=> {
-   res.render('sessions/new.ejs', {currentUser: req.session.currentUser})
+   res.render('sessions/newsession.ejs', {currentUser: req.session.currentUser})
 })
 
 
@@ -20,7 +20,7 @@ sessions.post('/', (req,res)=> {
          res.send('<a href="/sessions/new">Sorry, no user found</a>')
       } else {
          if(bcrypt.compareSync(req.body.password, foundUser.password)){
-            req.sessions.currentUser = founderUser
+            req.session.currentUser = foundUser
             res.redirect('/card')
          } else {
             res.send('<a href="/sessions/new">Password Does\'nt match records')

@@ -43,7 +43,7 @@ h1 {
    font-size: 1rem;
 
 }
-form {
+.newForm {
    display: flex;
    flex-wrap: wrap;
    flex-direction: column;

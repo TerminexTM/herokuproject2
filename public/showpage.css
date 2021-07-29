@@ -220,3 +220,11 @@ img {
    box-shadow: none;
    transform: translate(-2px, 1px);
 }
+h4 {
+   color: white;
+   text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black;
+   font-size: 2rem;
+   width: 100%;
+   text-align: center;
+   margin-right: 20%;
+}

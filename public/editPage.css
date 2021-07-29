@@ -36,7 +36,7 @@ h1 {
 .title {
    margin-top: 2%;
 }
-form {
+.editForm {
    display: flex;
    flex-wrap: wrap;
    flex-direction: column;

@@ -9,7 +9,7 @@
    <body>
       <%- include('../partials/background.ejs') %>
       <%- include('../partials/nav.ejs')%>
-      <form action="/card/<%=card.id%>?_method=PUT" method="post">
+      <form class='editForm' action="/card/<%=card.id%>?_method=PUT" method="post">
          <fieldset>
             <legend>Core info</legend>
                Card Name: <input type="text" name="name" value="<%=card.name%>">

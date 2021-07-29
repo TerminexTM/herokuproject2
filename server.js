@@ -4,6 +4,7 @@
 const express = require('express');
 const methodOverride  = require('method-override');
 const mongoose = require('mongoose');
+const session = require('express-session')
 const cardController = require('./controllers/card_controller.js')
 const userController = require('./controllers/users_controller.js')
 const sessionsController = require('./controllers/sessions_controller.js')
@@ -32,7 +33,11 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 //___________________
 //Middleware
 //___________________
-
+app.use(session({
+   secret: process.env.SECRET,
+   resave: false,
+   saveUninitialized: false
+}))
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));// extended: false - does not allow nested objects in query strings
 app.use(express.json());// returns middleware that only parses JSON - may or may not need it depending on your project
@@ -40,7 +45,7 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 app.use(methodOverride('_method'));
 app.use('/card', cardController);
 app.use('/users', userController)
-
+app.use('/sessions', sessionsController)
 
 app.get('/' , (req, res) => {
   res.redirect('/card');

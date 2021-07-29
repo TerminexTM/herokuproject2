@@ -5,23 +5,30 @@
       <link rel="stylesheet" href="../../indexNav.css">
    </head>
    <body>
+
       <nav class='navbar'>
+         <a class='navimg' href="/card"><img src="../../images/iconPhoto.jpg" alt=""></a>
          <% if(currentUser) { %>
+            <a class='new' href="/card/new"><h1>Create Card</h1></a>
             <form
-               class=""
+               class="logoutForm"
                action="/sessions?_method=DELETE"
                method="post"
             >
                   <input
+                     class='logout'
                      type="submit"
-                     name=""
+                     name="login"
                      value="Log Out"
                   >
             </form>
-               <a class='navimg' href="/card"><img src="../../images/iconPhoto.jpg" alt=""></a>
+            <% } else { %>
                <a class='new' href="/users/new"><h1>Sign Up</h1></a>
-               <a class='login' href="/users/new"><h1>Login</h1></a>
-
+               <a class='login' href="/sessions/new"><h1>Login</h1></a>
+               <% } %>
       </nav>
+      <% if (currentUser) { %>
+         <h4>Welcome: <%=currentUser.username%></h4>
+      <% } %>
    </body>
 </html>
