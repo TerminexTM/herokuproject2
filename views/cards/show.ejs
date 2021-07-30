@@ -11,12 +11,10 @@
    <body>
       <nav class='navbar'>
          <a class='navimg' href="/card"><img src="../images/iconPhoto.jpg" alt=""></a>
-         <% if(currentUser.username == card.username || currentUser.username == 'dustin'){ %>
          <a class='edit' href="/card/<%=card.id%>/edit"><h1>Edit Card</h1></a>
          <form class='deleteForm' action="/card/<%=card.id%>?_method=DELETE"   method="post">
             <input class='delete' type="submit" value="DELETE">
          </form>
-         <% } %>
       </nav>
       <% if (currentUser) { %>
          <h4>Welcome: <%=currentUser.username%></h4>
