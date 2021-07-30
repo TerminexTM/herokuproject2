@@ -141,22 +141,53 @@ table {
    padding: 2px;
 }
 .colorless {
-   color: gray;
+   color: black;
+   background-color: gray;
+   border-radius: 100%;
+   padding-left: 3px;
+   padding-right: 3px;
+   text-shadow: 1px 0 0 white, -1px 0 0 white, 0 1px 0 white, 0 -1px 0 white;
 }
 .blue {
-   color: blue;
+   color: black;
+   background-color: blue;
+   border-radius: 100%;
+   padding-left: 3px;
+   padding-right: 3px;
+   text-shadow: 1px 0 0 white, -1px 0 0 white, 0 1px 0 white, 0 -1px 0 white;
 }
 .green {
-   color: green;
+   color: black;
+   background-color: green;
+   border-radius: 100%;
+   padding-left: 3px;
+   padding-right: 3px;
+   text-shadow: 1px 0 0 white, -1px 0 0 white, 0 1px 0 white, 0 -1px 0 white;
 }
 .red {
-   color: red;
+   color: black;
+   background-color: red;
+   border-radius: 100%;
+   padding-left: 3px;
+   padding-right: 3px;
+   text-shadow: 1px 0 0 white, -1px 0 0 white, 0 1px 0 white, 0 -1px 0 white;
 }
 .white {
-   color: white;
+   color: black;
+   background-color: #ffbf27;
+   border-radius: 100%;
+   padding-left: 3px;
+   padding-right: 3px;
+   text-shadow: 1px 0 0 white, -1px 0 0 white, 0 1px 0 white, 0 -1px 0 white;
 }
 .black {
    color: black;
+   background-color: black;
+   border-radius: 100%;
+   padding-left: 3px;
+   padding-right: 3px;
+   text-shadow: 1px 0 0 white, -1px 0 0 white, 0 1px 0 white, 0 -1px 0 white;
+
 }
 img {
    width: 94%;
